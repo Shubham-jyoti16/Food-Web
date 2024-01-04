@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Website |Desserts </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <a href="#" class="logo">
+            <img src="images/Food Lover-logos.jpeg" alt="logo">
+            Food Lover</a>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Gallery.html">Gallery</a>
+            <a class="active" href="Dessert.html">Dessert</a>
+            <a href="Review.html">Review</a>
+            <a href="Contactus.html">Contact Us</a>
+            <a href="Register.html">Register</a>
+            <a href="Login.html">Login</a>
+            <a href="Cart.html">Cart</a>
+            <a href="Payment.html">Payment</a>
+            
+        </nav>
+
+    </header>
+    
+
+
+    <section class="popular" id="popular">
+
+        <h1 class="heading"> <span>popular</span> Desserts </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <span class="price"> $22 </span>
+                <img src="images/zucchinibrownies.png" alt="zucchinibrownies">
+                <h3>zucchini Brownies</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="btn order-now" data-product="zucchini Brownies" data-price="22.00">Order Now</button>
+                
+            </div>
+            <div class="box">
+                <span class="price"> $25 </span>
+                <img src="images/Pudding.png" alt="Pudding">
+                <h3>Pudding</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="btn order-now" data-product="Pudding" data-price="25.00">Order Now</button>
+                
+            </div>
+            <div class="box">
+                <span class="price"> $30 </span>
+                <img src="images/pannacottawithberries.png" alt="pannacottawithberries">
+                <h3>Panna Cotta with Berries</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="btn order-now" data-product="Panna Cotta with Berries" data-price="30.00">Order Now</button>
+                
+            </div>
+            <div class="box">
+                <span class="price"> $31 </span>
+                <img src="images/Berry_Icecream.png" alt="Berry_Icecream">
+                <h3>Berry Icecream</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="btn order-now" data-product="Berry Icecream" data-price="31.00">Order Now</button>
+            </div>
+            <div class="box">
+                <span class="price"> $32 </span>
+                <img src="images/LimePie.png" alt="LimePie">
+                <h3>Lime Pie</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="btn order-now" data-product="Lime Pie" data-price="32.00">Order Now</button>
+            </div>
+            <div class="box">
+                <span class="price"> $35 </span>
+                <img src="images/Cheesecake.png" alt="Cheesecake">
+                <h3>Cheese Cake</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="btn order-now" data-product="Cheese Cake" data-price="35.00">Order Now</button>
+            </div>
+
+        </div>
+
+    </section>
+
+   
+    <section class="footer">
+
+        <div class="share">
+            <a href="#" class="btn">facebook</a>
+            <a href="#" class="btn">twitter</a>
+            <a href="#" class="btn">instagram</a>
+            <a href="#" class="btn">pinterest</a>
+            <a href="#" class="btn">linkedin</a>
+        </div>
+
+        <h1 class="credit">  All rights reserved 2023 </h1>
+
+    </section>
+
+
+    <a href="#popular" class="fas fa-angle-up" id="scroll-top"></a>
+
+    <!-- loader  -->
+    <div class="loader-container">
+        <img src="images/loader.gif" alt="">
+    </div>
+    <script>
+        // Add a click event listener to the Order Now buttons
+        document.querySelectorAll('.order-now').forEach(button => {
+            button.addEventListener('click', function () {
+                const productName = this.getAttribute('data-product');
+                const productPrice = this.getAttribute('data-price');
+                // Create a URL to Cart.html with product and price parameters
+                const url = `Cart.html?product=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}`;
+                // Redirect to Cart.html with product and price data
+                window.location.href = url;
+            });
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
